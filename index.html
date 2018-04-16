@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>BIG MOOD</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900|Shrikhand|Spectral" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="thunder.ico">
+    </head>
+
+  <body>
+
+    <h1>BIG MOOD</h1>
+
+    <div id="player"></div>
+
+    <script>
+      var playlistId = "PLNDdQy4-Y-Zy411Tph1cRZAgaV0IVDx1r";
+
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '432',
+          width: '768',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          },
+          playerVars: {
+              'showinfo': 0,
+              'modestbranding': 1,
+              'iv_load_policy': 3,
+              'mute': 1,
+              'loop': 1,
+              'playlist': 'PLNDdQy4-Y-Zy411Tph1cRZAgaV0IVDx1r',
+              'fs': 0,
+              'controls': 0,
+              'rel': 0
+          }
+        });
+      }
+    
+        var playlistArray;
+            var playListArrayLength;
+            var maxNumber;
+        
+            var oldNumber = 0;
+            var NewNumber = 0;
+        
+            function newRandomNumber() {
+                oldNumber = NewNumber;
+                NewNumber = Math.floor(Math.random() * maxNumber);
+                if (NewNumber == oldNumber) {
+                    newRandomNumber();
+                } else {
+                    return NewNumber;
+                }
+            }
+        
+        function onPlayerReady(event) {
+            player.loadPlaylist({
+                'listType': 'playlist',
+                'list': 'PLNDdQy4-Y-Zy411Tph1cRZAgaV0IVDx1r'
+            });
+        }
+        
+        var firstLoad = true;
+        function onPlayerStateChange(event) {
+            console.log(event.data);
+            if (event.data == YT.PlayerState.ENDED) {
+                player.playVideoAt(newRandomNumber());   
+            } else {
+                if (firstLoad && event.data == YT.PlayerState.PLAYING) {
+                    firstLoad = false;
+                    playlistArray = player.getPlaylist();
+                    playListArrayLength = playlistArray.length;
+                    maxNumber = playListArrayLength;
+                    NewNumber = newRandomNumber();
+                    player.playVideoAt(newRandomNumber());
+                }
+            }
+        }    
+
+    </script>
+    <!--Why are you actually reading through this part, what in life made you think this was possibly a good idea-->
+    <p>Wiseau Films logo
+
+        Opening credits play against generic footage of Johnny stalking about San Francisco
+        
+        Exterior shot of Johnny’s car pulling up outside his house
+        
+        Johnny enters the living room
+        
+        Johnny: Hi babe! I have something for you.
+        
+        Lisa: What is it?
+        
+        Johnny: Just a little something.
+        
+        He playfully hides the package, then presents it to Lisa. She opens it to find a red dress.
+        
+        Lisa: Johnny, it’s beautiful. Thank you. Can I try it on now?
+        
+        Johnny: Sure, it’s yours.
+        
+        Lisa: Wait right here. (she grabs Johnny’s tie and kisses him) I’ll try it on right now.
+        
+        Johnny sits down. Cut to Lisa reemerging from the stairs in the red dress.
+        
+        Johnny: Wow, you look so sexy, Lisa.
+        
+        Lisa: Isn’t it fabulous?
+        
+        Johnny: I would do anything for my girl.
+        
+        Enter Denny
+        
+        Denny: Oh hey, guys.
+        
+        Johnny: Oh hi, Denny.
+        
+        Denny: Wow! Look at you!
+        
+        Lisa: It’s from Johnny.
+        
+        Johnny: Anything for my princess! Ha-ha-ha-ha.
+        
+        Denny: How much was it?
+        
+        Lisa: Denny, don’t ask a question like that!
+        
+        Johnny: Nice to see you, Denny. I’m going to take a nap.
+        
+        Denny: Can I go upstairs too?
+        
+        Johnny: Ha-ha!
+        
+        Lisa: Denny, I think I’m gonna join him.
+        
+        Johnny: A-ha-ha.
+        
+        They exit upstairs, speaking barely audibly
+        
+        Lisa: I’ve got some candles upstairs.
+        
+        Johnny: You always think. A-ha-ha. Alright, I’m ready.
+        
+        Lisa: This is so pretty, I can’t wait for you to get it off of me.
+        
+        Johnny: Oh, yeahhh.
+        
+        Denny takes a bite of an apple, then follows them upstairs.
+        
+        In the bedroom, Johnny and Lisa start a pillow fight.
+        
+        Johnny: A-ha-ha! (incomprehensible gibberish) Ha-ha-ha! Ouch!
+        
+        Denny joins in and gets clobbered as everyone laughs.
+        
+        <a href="">Denny: No, stop!
+        
+        Johnny: Denny, do you have something else to do?</a>
+        
+        Denny: I just like to watch you guys.
+        
+        Lisa: Oh, Denny, Denny, Denny boy!
+        
+        Johnny: Denny, two’s great, but three’s a crowd, ha-ha.
+        
+        Denny: I get it. You guys want to <a href="">be alone.
+        
+        Johnny: That’s the idea!
+        
+        Denny: Fine. I have homework to do</a> anyway. Bye, lovebirds!
+        
+        Johnny: Bye, Denny.
+        
+        Lisa: Bye, Denny.
+        
+        Denny exits, and a three-minute love scene commences, scored to terrible R&B. There’s a lot <a href="">of water and rose petals and naked boobs. Johnny fucks Lisa’s belly button</a>. Afterwards they lie awkwardly in bed together, and Lisa seems bored with Johnny as he sleeps.
+        
+        The alarm clock goes off at :28. Johnny gets up, smells a rose, and <a href="">bares his ass to the camera. He emerges from the bathroom dressed for work</a> and greets Lisa.
+        
+        Johnny: Did you like last night?
+        
+        Lisa: Yes I did.
+        
+        Johnny: Ha-ha-ha.
+        
+        Lisa: Can I get you anything?
+        
+        Johnny: Unh-unh. I have to go now.
+        
+        Lisa: Okay, bye.
+        
+        Johnny: Bye.
+        
+        Johnny exits. Cut to an exterior daytime shot of the house, then to the living room. Lisa answers the door, and Claudette enters.
+        
+        Lisa: Hi mom, how are you?
+        
+        Claudette: I’m fine, how are you? Hmmm? Okay, let’s go to the couch, and we will sit down. Now, what’s happening with you? Hmmm?
+        
+        Lisa: Nothing much. Do you want some coffee?
+        
+        Claudette: What’s wrong? Tell me.
+        
+        Lisa: I’m not feeling good today.
+        
+        Claudette: Well, why not?
+        
+        Lisa: I don’t love him anymore.
+        
+        Claudette: Why don’t you love him anymore? Tell me.
+        
+        Lisa: He’s so boring.
+        
+        Claudette: You’ve known him for over five years. You’re engaged. You said you loved him. He supports you, he provides for you, and darling, you can’t support yourself. He’s a wonderful man, and he loves you very much. And his position is very secure. And he told me he plans to buy you a house.
+        
+        Lisa: That’s why he’s so boring!
+        
+        Claudette: Well, what are you going to do?
+        
+        Lisa: I don’t know. I don’t mind living with him.
+        
+        Claudette: Well, you can’t do that. Have you talked to him about it?
+        
+        Lisa: No. I don’t know what to do.
+        
+        Claudette: Well, he’s a wonderful person. And he’s getting a promotion very soon. Now he bought you a car, he bought you a ring, clothes, whatever you wanted, and now you want to dump him. That’s not right. I’ve always thought of him as my son-in-law. You should marry Johnny, he would be good for you.</p>
+
+    <iframe id="spotify" src="https://open.spotify.com/embed/user/cawmander/playlist/3XT8rvEu4NehBXNWXyAjal" width="250" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <h2><a id="why" href="">refresh</a> the page for more big moves.</h2>
+
+    <img id="bust" src="bust_girl.jpg" alt="its not tommy wiseau">
+
+    <img id= "shades" src="https://media.giphy.com/media/3ohzdWYbITsO2Y5rbi/source.gif" alt="also not tomy wiseau">
+
+    <a href="https://thumbor.forbes.com/thumbor/960x0/smart/https%3A%2F%2Fb-i.forbesimg.com%2Ftomiogeron%2Ffiles%2F2013%2F09%2F153895v6-max-250x250.png" target="_blank"><img id= "spam" src="http://archive.rhizome.org/artbase/53981/nastynets.com/secretstash/blogstuff/2007/02/media106195.gif" alt="CONGRATULATIONS ITS TOMMY WISEAU!!!!!!"></a>
+
+  </body>
+</html>
