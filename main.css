@@ -84,3 +84,24 @@ a {
         text-decoration-color: #0080ff;
         color: #0080ff;
 }
+
+#alert {
+    position: absolute;
+    min-width: 400px;
+    height: 200px;
+    top: 40%;
+    left: 70%;
+    font-size: 2vh;
+}
+
+#whydoineedtomakeafuckingidfortext {
+    background-color: yellow;
+}
+
+#engineerstatus {
+    position: fixed;
+    bottom: 1;
+    left: 5;
+    width: 300px;
+    font-size: 3vh;
+}
